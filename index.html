@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DEAC Formula Racing</title>
-  <link rel="icon" type="image/png" href="img/logo.png"/>	
+  <link rel="icon" type="image/png" href="img/logo.png"/>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -19,6 +19,15 @@
       p, li { @apply text-gray-200; font-size: clamp(1rem, 1.8vw, 1.25rem); line-height: 1.6; }
       small { font-size: clamp(0.75rem, 1.2vw, 0.875rem); }
     }
+	@keyframes fadeInUp {
+		0% { opacity: 0; transform: translateY(20px); }
+		100% { opacity: 1; transform: translateY(0); }
+	  }
+	.animate-fadeInUp { animation: fadeInUp 0.5s forwards; }
+	.delay-75 { animation-delay: 0.075s; }
+	.delay-150 { animation-delay: 0.15s; }
+	.delay-200 { animation-delay: 0.2s; }
+	.delay-300 { animation-delay: 0.3s; }
   </style>
 </head>
 <body class="bg-black text-gray-200 font-sans">
@@ -88,7 +97,7 @@
     <div class="md:flex md:items-center md:gap-12 bg-black/50 rounded-xl p-6 backdrop-blur-md">
       <div class="md:w-1/2 space-y-6 text-gray-200 text-justify">
         <h3 class="font-semibold text-yellow-400 mb-4 text-[clamp(1.25rem,3vw,2rem)]">A csapat</h3>
-        <p class="flex-1 text-gray-200 text-justify space-y-4" style="text-align-last: left; hyphens: auto;">A DEAC Formula Student 2025-ben alakult, a Debreceni Egyetem Műszaki Karán, jelenleg körülbelüli 25 főt számláló Formula Student csapatunk. Csapattagok gépészmérnöki, mechatronika és járműmérnöki tanszékekről érkeznek. A csapatunk elektromos meghajtású versenyautót tervez a Formula Student versenysorozatra.</p>
+        <p class="flex-1 text-gray-200 text-justify space-y-4" style="text-align-last: left; hyphens: auto;">A DEAC Formula Student 2025-ben alakult, a Debreceni Egyetem Műszaki Karán, jelenleg körülbelüli 23 főt számláló Formula Student csapatunk. Csapattagok gépészmérnöki, mechatronika és járműmérnöki tanszékekről érkeznek. A csapatunk elektromos meghajtású versenyautót tervez a Formula Student versenysorozatra.</p>
         <p class="flex-1 text-gray-200 text-justify space-y-4" style="text-align-last: left; hyphens: auto;">A célunk, hogy építsünk egy teljesen működőképes, biztonságos és szabályos versenyautót, amely képes a technikai ellenőrzés és a dinamikus versenyszámok teljesítésére a 2026-es FS versenyen.</p>
       </div>
       <div class="md:w-1/2 mt-6 md:mt-0 flex justify-center items-center">
@@ -130,7 +139,7 @@
         <p>A Formula Student mérnökverseny célja egy olyan formula autó tervezése, kivitelezése és képzeletbeli piacra bocsátása, melyet hallgatói jogviszonnyal rendelkező diákok valósítanak meg és versenyeztetnek nemzetközi színtéren. A munkatapasztalat mellett, lehetőség van kapcsolatokat kiépíteni a Formula Student-ben résztvevő hallgatók és elismert szakemberek között. Ezen versenyek számos európai országban kerülnek megrendezésre.</p>
       </div>
       <div class="w-64 flex-shrink-0 mt-6 md:mt-0 mx-auto">
-        <img src="img/fs_car.jpg" alt="Formula Student car" class="rounded-2xl shadow-lg cursor-pointer hover:scale-105 transition-transform duration-500" onclick="openLightbox(this)">
+        <img src="img/fs_car.jpg" alt="Formula Student car" class="w-full rounded-2xl shadow-lg cursor-pointer hover:scale-105 transition-transform duration-500" onclick="openLightbox(this)">
       </div>
     </div>
 
@@ -232,29 +241,137 @@
 </section>
 
 <!-- Csapattagok -->
-<section class="max-w-6xl mx-auto py-20 px-6" id="team">
-  <h2 class="font-bold mb-12 text-center text-yellow-400 text-[clamp(2rem,5vw,3rem)]" data-aos="fade-up">Csapattagok</h2>
-  <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-    <div class="text-center" data-aos="flip-left">
-      <img src="img/elmo.jpg" alt="Kiss Péter" class="w-32 h-32 mx-auto rounded-full mb-4 object-cover">
-      <h3 class="font-semibold text-blue-400 text-[clamp(1.25rem,3vw,2rem)]">Kiss Péter</h3>
-      <p class="text-sm text-gray-400">Pozíció</p>
+<section id="team" class="max-w-6xl mx-auto py-20 px-6">
+  <h2 class="text-center text-yellow-400 text-[clamp(2rem,5vw,3rem)] font-bold mb-12">Csapattagok</h2>
+
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-6" id="team-grid">
+    <!-- Látható tagok -->
+    <div class="flex flex-col items-center text-center animate-fadeInUp delay-100">
+      <img src="img/pfp.jpg" alt="Tag 1" class="w-32 h-32 object-cover rounded-full shadow-lg mb-2">
+      <p class="font-semibold text-white">Hegedűs Csongor</p>
+      <p class="text-gray-400 text-sm">Csapatkapitány</p>
     </div>
-    <div class="text-center" data-aos="flip-left">
-      <img src="img/abby.png" alt="Nagy Anna" class="w-32 h-32 mx-auto rounded-full mb-4 object-cover">
-      <h3 class="font-semibold text-blue-400 text-[clamp(1.25rem,3vw,2rem)]">Nagy Anna</h3>
-      <p class="text-sm text-gray-400">Pozíció</p>
+    <div class="flex flex-col items-center text-center animate-fadeInUp">
+      <img src="img/pfp.jpg" alt="Tag 2" class="w-32 h-32 object-cover rounded-full shadow-lg mb-2">
+      <p class="font-semibold text-white">Bácsi Sándor</p>
+      <p class="text-gray-400 text-sm">Electrical Department Leader</p>
     </div>
-    <div class="text-center" data-aos="flip-left">
-      <img src="img/oscar.jpg" alt="Tóth Dávid" class="w-32 h-32 mx-auto rounded-full mb-4 object-cover">
-      <h3 class="font-semibold text-blue-400 text-[clamp(1.25rem,3vw,2rem)]">Tóth Dávid</h3>
-      <p class="text-sm text-gray-400">Pozíció</p>
+    <div class="flex flex-col items-center text-center animate-fadeInUp">
+      <img src="img/pfp.jpg" alt="Tag 3" class="w-32 h-32 object-cover rounded-full shadow-lg mb-2">
+      <p class="font-semibold text-white">Huszánk Szabolcs</p>
+      <p class="text-gray-400 text-sm">Mechanical Team, Business Team</p>
     </div>
-    <div class="text-center" data-aos="flip-left">
-      <img src="img/julia.png" alt="Szabó Eszter" class="w-32 h-32 mx-auto rounded-full mb-4 object-cover">
-      <h3 class="font-semibold text-blue-400 text-[clamp(1.25rem,3vw,2rem)]">Szabó Eszter</h3>
-      <p class="text-sm text-gray-400">Pozíció</p>
+    <div class="flex flex-col items-center text-center animate-fadeInUp">
+      <img src="img/pfp.jpg" alt="Tag 4" class="w-32 h-32 object-cover rounded-full shadow-lg mb-2">
+      <p class="font-semibold text-white">Fazekas Márkó</p>
+      <p class="text-gray-400 text-sm">Mechanical Team, Business Team</p>
     </div>
+    <div class="flex flex-col items-center text-center animate-fadeInUp">
+      <img src="img/pfp.jpg" alt="Tag 5" class="w-32 h-32 object-cover rounded-full shadow-lg mb-2">
+      <p class="font-semibold text-white">Tomorszki Adrián</p>
+      <p class="text-gray-400 text-sm">Mechanical Team, Business Team</p>
+    </div>
+    <div class="flex flex-col items-center text-center animate-fadeInUp">
+      <img src="img/pfp.jpg" alt="Tag 6" class="w-32 h-32 object-cover rounded-full shadow-lg mb-2">
+      <p class="font-semibold text-white">Kánya Dániel</p>
+      <p class="text-gray-400 text-sm">Mechanical Team, Business Team</p>
+    </div>
+    <div class="flex flex-col items-center text-center animate-fadeInUp">
+      <img src="img/pfp.jpg" alt="Tag 7" class="w-32 h-32 object-cover rounded-full shadow-lg mb-2">
+      <p class="font-semibold text-white">Mbirimujo Christoph</p>
+      <p class="text-gray-400 text-sm">Mechanical Team</p>
+    </div>
+    <div class="flex flex-col items-center text-center animate-fadeInUp">
+      <img src="img/pfp.jpg" alt="Tag 8" class="w-32 h-32 object-cover rounded-full shadow-lg mb-2">
+      <p class="font-semibold text-white">Szilágyi Dávid</p>
+      <p class="text-gray-400 text-sm">Mechanical Team</p>
+    </div>	</div>
+
+    <!-- Többi tag alapból rejtve -->	
+	<div class="overflow-hidden transition-all duration-500 max-h-0" id="extra-members-container">
+	<div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-4">
+
+    <div class="flex flex-col items-center text-center animate-fadeInUp">
+      <img src="img/pfp.jpg" alt="Tag 9" class="w-32 h-32 object-cover rounded-full shadow-lg mb-2">
+      <p class="font-semibold text-white">Mikhail Petrun</p>
+      <p class="text-gray-400 text-sm">Mechanical Team</p>
+    </div>
+    <div class="flex flex-col items-center text-center animate-fadeInUp">
+      <img src="img/pfp.jpg" alt="Tag 10" class="w-32 h-32 object-cover rounded-full shadow-lg mb-2">
+      <p class="font-semibold text-white">Balogh Emese</p>
+      <p class="text-gray-400 text-sm">Mechanical Team</p>
+    </div>
+    <div class="flex flex-col items-center text-center animate-fadeInUp">
+      <img src="img/pfp.jpg" alt="Tag 11" class="w-32 h-32 object-cover rounded-full shadow-lg mb-2">
+      <p class="font-semibold text-white">Vágási Imre</p>
+      <p class="text-gray-400 text-sm">Mechanical Team</p>
+    </div>
+    <div class="flex flex-col items-center text-center animate-fadeInUp">
+      <img src="img/pfp.jpg" alt="Tag 12" class="w-32 h-32 object-cover rounded-full shadow-lg mb-2">
+      <p class="font-semibold text-white">Szűcs Máté</p>
+      <p class="text-gray-400 text-sm">Mechanical Team</p>
+    </div>
+    <div class="flex flex-col items-center text-center animate-fadeInUp">
+      <img src="img/pfp.jpg" alt="Tag 13" class="w-32 h-32 object-cover rounded-full shadow-lg mb-2">
+      <p class="font-semibold text-white">Dávid Milán</p>
+      <p class="text-gray-400 text-sm">Electrical Team</p>
+    </div>
+    <div class="flex flex-col items-center text-center animate-fadeInUp">
+      <img src="img/pfp.jpg" alt="Tag 14" class="w-32 h-32 object-cover rounded-full shadow-lg mb-2">
+      <p class="font-semibold text-white">Nour Jeridi</p>
+      <p class="text-gray-400 text-sm">Electrical Team</p>
+    </div>
+    <div class="flex flex-col items-center text-center animate-fadeInUp">
+      <img src="img/pfp.jpg" alt="Tag 15" class="w-32 h-32 object-cover rounded-full shadow-lg mb-2">
+      <p class="font-semibold text-white">Bacskai Máté</p>
+      <p class="text-gray-400 text-sm">Mechanical Team</p>
+    </div>
+    <div class="flex flex-col items-center text-center animate-fadeInUp">
+      <img src="img/pfp.jpg" alt="Tag 16" class="w-32 h-32 object-cover rounded-full shadow-lg mb-2">
+      <p class="font-semibold text-white">Vértessy Bálint</p>
+      <p class="text-gray-400 text-sm">Mechanical Team</p>
+    </div>
+    <div class="flex flex-col items-center text-center animate-fadeInUp">
+      <img src="img/pfp.jpg" alt="Tag 17" class="w-32 h-32 object-cover rounded-full shadow-lg mb-2">
+      <p class="font-semibold text-white">Majoros Milán</p>
+      <p class="text-gray-400 text-sm">Electrical Team</p>
+    </div>
+    <div class="flex flex-col items-center text-center animate-fadeInUp">
+      <img src="img/pfp.jpg" alt="Tag 18" class="w-32 h-32 object-cover rounded-full shadow-lg mb-2">
+      <p class="font-semibold text-white">Antal Szabolcs</p>
+      <p class="text-gray-400 text-sm">Electrical Team</p>
+    </div>
+    <div class="flex flex-col items-center text-center animate-fadeInUp">
+      <img src="img/pfp.jpg" alt="Tag 19" class="w-32 h-32 object-cover rounded-full shadow-lg mb-2">
+      <p class="font-semibold text-white">Kui Márk Ferenc</p>
+      <p class="text-gray-400 text-sm">Mechanical Team</p>
+    </div>
+    <div class="flex flex-col items-center text-center animate-fadeInUp">
+      <img src="img/pfp.jpg" alt="Tag 20" class="w-32 h-32 object-cover rounded-full shadow-lg mb-2">
+      <p class="font-semibold text-white">Juhász Bálint Attila</p>
+      <p class="text-gray-400 text-sm">Electrical Team</p>
+    </div>
+    <div class="flex flex-col items-center text-center animate-fadeInUp">
+      <img src="img/pfp.jpg" alt="Tag 21" class="w-32 h-32 object-cover rounded-full shadow-lg mb-2">
+      <p class="font-semibold text-white">Muhammad Mana</p>
+      <p class="text-gray-400 text-sm">Electrical Team</p>
+    </div>
+    <div class="flex flex-col items-center text-center animate-fadeInUp">
+      <img src="img/pfp.jpg" alt="Tag 22" class="w-32 h-32 object-cover rounded-full shadow-lg mb-2">
+      <p class="font-semibold text-white">Gombos Ádám</p>
+      <p class="text-gray-400 text-sm">Electrical Team</p>
+    </div>
+    <div class="flex flex-col items-center text-center animate-fadeInUp">
+      <img src="img/pfp.jpg" alt="Tag 23" class="w-32 h-32 object-cover rounded-full shadow-lg mb-2">
+      <p class="font-semibold text-white">Reisz Rudolf Ádám</p>
+      <p class="text-gray-400 text-sm">Electrical Team</p>
+    </div>
+	</div></div>
+
+  <div class="text-center mt-6">
+    <button id="toggle-team" class="bg-yellow-400 hover:bg-yellow-500 text-black px-6 py-2 rounded-full font-semibold transition">
+      További csapattagok
+    </button>
   </div>
 </section>
 
@@ -349,7 +466,21 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>AOS.init({ once: true });</script>
+<script>
+  const toggleBtn = document.getElementById('toggle-team');
+  const extraContainer = document.getElementById('extra-members-container');
 
+  toggleBtn.addEventListener('click', () => {
+    if(extraContainer.style.maxHeight && extraContainer.style.maxHeight !== '0px'){
+      // bezárás
+      extraContainer.style.maxHeight = '0';
+      toggleBtn.textContent = 'További csapattagok';
+    } else {
+      // nyitás
+      extraContainer.style.maxHeight = extraContainer.scrollHeight + 'px';
+      toggleBtn.textContent = 'Bezárás';
+    }
+  });
+</script>
 </body>
 </html>
-
