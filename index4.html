@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DEAC Formula Racing</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    @layer base {
+      h1 { @apply font-extrabold text-yellow-400 !important; font-size: clamp(3rem, 8vw, 5rem) !important; }
+      h2 { @apply font-bold text-blue-400; font-size: clamp(2rem, 5vw, 3rem); }
+      h3 { @apply font-semibold text-yellow-400; font-size: clamp(1.5rem, 4vw, 2.25rem); }
+      h4 { @apply font-semibold text-gray-200; font-size: clamp(1.25rem, 3vw, 1.75rem); }
+      h5 { @apply font-medium text-gray-300; font-size: clamp(1.125rem, 2.5vw, 1.5rem); }
+      h6 { @apply font-medium text-gray-400; font-size: clamp(1rem, 2vw, 1.25rem); }
+      p, li { @apply text-gray-200; font-size: clamp(1rem, 1.8vw, 1.25rem); line-height: 1.6; }
+      small { font-size: clamp(0.75rem, 1.2vw, 0.875rem); }
+    }
+  </style>
+</head>
+<body class="bg-black text-gray-200 font-sans">
+
+<!-- NAVBAR -->
+<header class="fixed top-0 left-0 w-full bg-black/80 backdrop-blur-md z-50 border-b border-gray-800">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
+    <!-- Logo -->
+    <div class="flex items-center gap-2">
+      <div class="w-10 h-10">
+        <img src="img/logo.png" alt="DEAC Formula Racing logó" class="w-full h-full object-contain">
+      </div>
+      <span class="font-bold text-yellow-400">DEAC Formula Racing</span>
+    </div>
+
+    <!-- Desktop Menu -->
+    <nav class="hidden md:flex gap-6 font-medium">
+      <a href="#about" class="hover:text-yellow-400">Rólunk</a>
+      <a href="#formula-student" class="hover:text-yellow-400">Formula Student</a>
+      <a href="#sponsors" class="hover:text-yellow-400">Támogatók</a>
+      <a href="#positions" class="hover:text-yellow-400">Pozíciók</a>
+      <a href="#team" class="hover:text-yellow-400">Csapat</a>
+      <a href="#contact" class="hover:text-yellow-400">Kapcsolat</a>
+    </nav>
+
+    <!-- Hamburger mobil -->
+    <button id="mobile-btn" class="md:hidden flex flex-col justify-center items-center w-8 h-8 gap-1 relative z-50">
+      <span class="block w-8 h-0.5 bg-yellow-400 transition-all origin-center"></span>
+      <span class="block w-8 h-0.5 bg-yellow-400 transition-all origin-center"></span>
+      <span class="block w-8 h-0.5 bg-yellow-400 transition-all origin-center"></span>
+    </button>
+  </div>
+
+  <!-- Mobile dropdown menu -->
+  <nav id="mobile-menu" class="md:hidden bg-gray-900 hidden flex-col px-6 py-4 space-y-4 font-medium">
+    <a href="#about" class="block hover:text-yellow-400">Rólunk</a>
+    <a href="#formula-student" class="block hover:text-yellow-400">Formula Student</a>
+    <a href="#sponsors" class="block hover:text-yellow-400">Támogatók</a>
+    <a href="#positions" class="block hover:text-yellow-400">Pozíciók</a>
+    <a href="#team" class="block hover:text-yellow-400">Csapat</a>
+    <a href="#contact" class="block hover:text-yellow-400">Kapcsolat</a>
+  </nav>
+</header>
+
+<!-- Hero -->
+<section class="h-screen flex flex-col justify-center items-center text-center bg-gradient-to-br from-black to-blue-900 text-white relative">
+  <div data-aos="fade-up" class="mt-16 flex flex-col items-center text-center gap-4">
+    <h1 class="font-extrabold text-yellow-400 text-[clamp(3rem,8vw,5rem)] mb-4">Üdvözöl a DEAC Formula Racing!</h1>
+    <p class=" mb-0 text-gray-200 text-[clamp(1rem,1.8vw,1.25rem)]">Tervezünk. Építünk. Versenyzünk.<br>A pályán egy autó jelenik meg, de mögötte egy egész csapat áll!</p>
+    <a href="#contact" class="bg-yellow-400 hover:bg-yellow-500 text-black px-6 py-3 rounded-full font-semibold transition">Írj nekünk!</a>
+  </div>
+  
+  <div class="absolute bottom-6 animate-bounce text-sm opacity-70">↓ Görgess ↓</div>
+</section>
+
+<!-- Rólunk -->
+<section class="max-w-6xl mx-auto py-20 px-6" id="about">
+  <h2 class="font-bold mb-12 text-center text-yellow-400 text-[clamp(2rem,5vw,3rem)]" data-aos="fade-up">Rólunk</h2>
+  <div class="bg-gray-900 rounded-2xl p-6 md:p-12 shadow-lg space-y-12" data-aos="fade-up">
+
+    <div class="md:flex md:items-center md:gap-12 bg-black/50 rounded-xl p-6 backdrop-blur-md">
+      <div class="md:w-1/2 space-y-6 text-gray-200 text-justify">
+        <h3 class="font-semibold text-yellow-400 mb-4 text-[clamp(1.25rem,3vw,2rem)]">A csapat</h3>
+        <p class="flex-1 text-gray-200 text-justify space-y-4" style="text-align-last: left; hyphens: auto;">A DEAC Formula Student 2025-ben alakult, a Debreceni Egyetem Műszaki Karán, jelenleg körülbelüli 25 főt számláló Formula Student csapatunk. Csapattagok gépészmérnöki, mechatronika és járműmérnöki tanszékekről érkeznek. A csapatunk elektromos meghajtású versenyautót tervez a Formula Student versenysorozatra.</p>
+        <p class="flex-1 text-gray-200 text-justify space-y-4" style="text-align-last: left; hyphens: auto;">A célunk, hogy építsünk egy teljesen működőképes, biztonságos és szabályos versenyautót, amely képes a technikai ellenőrzés és a dinamikus versenyszámok teljesítésére a 2026-es FS versenyen.</p>
+      </div>
+      <div class="md:w-1/2 mt-6 md:mt-0 flex justify-center items-center">
+        <img src="img/csapatkep.jpeg" alt="Csapatkép" class="rounded-2xl shadow-lg w-full h-auto object-cover cursor-pointer hover:scale-105 transition-transform duration-500" onclick="openLightbox(this)">
+      </div>
+    </div>
+
+    <div class="md:flex md:items-center md:gap-12 bg-black/50 rounded-xl p-6 backdrop-blur-md">
+
+      <div class="md:w-1/2 space-y-6 text-gray-200 text-justify">
+        <h3 class="font-semibold text-yellow-400 mb-4 text-[clamp(1.25rem,3vw,2rem)]">Hol dolgozunk?</h3>
+        <p class="mb-4 flex-1 text-gray-200 text-justify space-y-4" style="text-align-last: left; hyphens: auto;">A Debreceni Egyetem Járműlaboratóriuma szoros együttműködésben a BMW-vel valósult meg, és hivatalosan 2025-ben készült el. Ez a stratégiai partnerség egy korszerű, közel 5000 négyzetméteres létesítményt eredményezett, amely magas szintű autóipari kutatást, fejlesztést és oktatást szolgál.</p>
+        <p class="mb-4 flex-1 text-gray-200 text-justify space-y-4" style="text-align-last: left; hyphens: auto;">A laboratórium dedikált és biztonságos munkateret biztosít az egyetem Formula Student csapata számára, lehetővé téve a zavartalan mérnöki munkát és innovációt. A létesítményhez egy járműteszt pálya is tartozik, amely valós körülményeket kínál a kísérleti validáláshoz és a teljesítmény optimalizálásához.</p>
+        <p class="mb-4 flex-1 text-gray-200 text-justify space-y-4" style="text-align-last: left; hyphens: auto;">A teljes versenyképesség érdekében a laboratórium minden olyan alapvető részleggel fel van szerelve, amely egy sikeres Formula Student programhoz szükséges, beleértve:</p>
+        <ul class="list-disc list-inside mb-4">
+          <li>Gépészmérnöki laborokat</li>
+          <li>Elektronikai és beágyazott rendszerek laborokat</li>
+          <li>Anyagtudományi és tesztelési létesítményeket</li>
+          <li>Szoftverfejlesztési és szimulációs környezeteket</li>
+        </ul>
+		<p></p>
+      </div>
+	        <div class="md:w-1/2">
+        <img src="img/jkc.jpg" alt="Debreceni Egyetem Járműlaboratóriuma" class="rounded-2xl shadow-lg w-full h-auto object-cover cursor-pointer hover:scale-105 transition-transform duration-500" onclick="openLightbox(this)">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Formula Student -->
+<section class="max-w-6xl mx-auto py-20 px-6" id="formula-student">
+  <h2 class="font-bold mb-12 text-center text-yellow-400 text-[clamp(2rem,5vw,3rem)]" data-aos="fade-up">Mi az a Formula Student?</h2>
+  <div class="bg-gray-900 rounded-2xl p-8 md:p-12 space-y-8 shadow-lg">
+
+    <!-- 1. sor -->
+    <div class="flex flex-col md:flex-row md:items-center gap-6 bg-black/50 rounded-2xl p-6 backdrop-blur-md shadow-md" data-aos="fade-up">
+      <div class="flex-1 text-gray-200 text-justify space-y-4" style="text-align-last: left; hyphens: auto;">
+        <p>A Formula Student mérnökverseny célja egy olyan formula autó tervezése, kivitelezése és képzeletbeli piacra bocsátása, melyet hallgatói jogviszonnyal rendelkező diákok valósítanak meg és versenyeztetnek nemzetközi színtéren. A munkatapasztalat mellett, lehetőség van kapcsolatokat kiépíteni a Formula Student-ben résztvevő hallgatók és elismert szakemberek között. Ezen versenyek számos európai országban kerülnek megrendezésre.</p>
+      </div>
+      <div class="w-64 flex-shrink-0 mt-6 md:mt-0 mx-auto">
+        <img src="img/fs_car.jpg" alt="Formula Student car" class="rounded-2xl shadow-lg cursor-pointer hover:scale-105 transition-transform duration-500" onclick="openLightbox(this)">
+      </div>
+    </div>
+
+    <!-- 2. sor -->
+    <div class="flex flex-col md:flex-row-reverse md:items-center gap-6 bg-black/50 rounded-2xl p-6 backdrop-blur-md shadow-md" data-aos="fade-up">
+      <div class="flex-1 text-gray-200 text-justify space-y-4" style="text-align-last: left; hyphens: auto;">
+        <p>Egy Formula Student verseny négy napos, melyből kettő a technikai és biztonsági szabályoknak megfelelésről szól. Ezek teljesítésével lehet részt venni a következő két napban a gyakorlati értelemben vett versenyen. A versenyszámok két csoportra bonthatók: statikusra és dinamikusra.</p>
+      </div>
+      <div class="w-64 flex-shrink-0 mt-6 md:mt-0 mx-auto">
+        <img src="img/dinamic.jpg" alt="Team working" class="rounded-2xl shadow-lg cursor-pointer hover:scale-105 transition-transform duration-500" onclick="openLightbox(this)">
+      </div>
+    </div>
+
+    <!-- 3. sor -->
+    <div class="flex flex-col md:flex-row md:items-center gap-6 bg-black/50 rounded-2xl p-6 backdrop-blur-md shadow-md" data-aos="fade-up">
+      <div class="flex-1 text-gray-200 text-justify space-y-4" style="text-align-last: left; hyphens: auto;">
+        <p>A Dinamikus versenyszámok közé tartozik a gyorsulás, az ún. „SkidPad” amely az autó kanyardinamikáját teszteli egy 8-ast szimbolizáló pályán, az Autocross, amely egy adott pályaszakaszon mért időket foglalja magába, végül a legjelentősebb erőpróba az úgynevezett „Endurance”, amelyben az autó idejét, valamint a fogyasztását mérik egy 22 km-es zárt körpályán.</p>
+      </div>
+      <div class="w-64 flex-shrink-0 mt-6 md:mt-0 mx-auto">
+        <img src="img/skidpad.jpg" alt="Dynamic event" class="rounded-2xl shadow-lg cursor-pointer hover:scale-105 transition-transform duration-500" onclick="openLightbox(this)">
+      </div>
+    </div>
+
+    <!-- 4. sor -->
+    <div class="flex flex-col md:flex-row-reverse md:items-center gap-6 bg-black/50 rounded-2xl p-6 backdrop-blur-md shadow-md" data-aos="fade-up">
+      <div class="flex-1 text-gray-200 text-justify space-y-4" style="text-align-last: left; hyphens: auto;">
+        <p>A Statikus megmérettetés részei a prezentációk, amelyek a műszaki terv megvédését, egy üzleti terv bemutatását, valamint egy költségelemzést foglalnak magukban.</p>
+      </div>
+      <div class="w-64 flex-shrink-0 mt-6 md:mt-0 mx-auto">
+        <img src="img/businessplan.jpg" alt="Static event" class="rounded-2xl shadow-lg cursor-pointer hover:scale-105 transition-transform duration-500" onclick="openLightbox(this)">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Támogatók -->
+<section class="max-w-6xl mx-auto py-20 px-6" id="sponsors">
+  <h2 class="font-bold mb-12 text-center text-yellow-400 text-[clamp(2rem,5vw,3rem)]" data-aos="fade-up">Támogatóink</h2>
+  <div class="space-y-12">
+
+    <div class="bg-gray-900 rounded-2xl p-6 md:p-12 shadow-lg" data-aos="fade-up">
+      <h3 class="text-cyan-400 font-semibold mb-6 text-center text-[clamp(1.25rem,3vw,2rem)]">Platina</h3>
+      <div class="grid grid-cols-2 md:grid-cols-2 gap-8 justify-items-center items-center">
+        <img src="img/debreceniegyetem.png" alt="Platina logó 1" class="w-96 h-48 object-contain rounded-2xl shadow-lg cursor-pointer hover:scale-105 transition-transform duration-500">
+        <img src="img/deac.png" alt="Platina logó 2" class="w-96 h-48 object-contain rounded-2xl shadow-lg cursor-pointer hover:scale-105 transition-transform duration-500">
+        <img src="img/schaeffler.png" alt="Platina logó 3" class="w-96 h-48 object-contain rounded-2xl shadow-lg cursor-pointer hover:scale-105 transition-transform duration-500">
+      </div>
+    </div>
+
+    <div class="bg-gray-900 rounded-2xl p-6 md:p-12 shadow-lg" data-aos="fade-up">
+      <h3 class="text-yellow-400 font-semibold mb-6 text-center text-[clamp(1.25rem,3vw,2rem)]">Arany</h3>
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-8 justify-items-center items-center">
+        <img src="img/test.png" alt="Arany logó 1" class="w-80 h-40 object-contain rounded-2xl shadow-lg cursor-pointer hover:scale-105 transition-transform duration-500">
+        <img src="img/test.png" alt="Arany logó 2" class="w-80 h-40 object-contain rounded-2xl shadow-lg cursor-pointer hover:scale-105 transition-transform duration-500">
+        <img src="img/test.png" alt="Arany logó 3" class="w-80 h-40 object-contain rounded-2xl shadow-lg cursor-pointer hover:scale-105 transition-transform duration-500">
+      </div>
+    </div>
+
+    <div class="bg-gray-900 rounded-2xl p-6 md:p-12 shadow-lg" data-aos="fade-up">
+      <h3 class="text-gray-400 font-semibold mb-6 text-center text-[clamp(1.25rem,3vw,2rem)]">Ezüst</h3>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 justify-items-center items-center">
+        <img src="img/test.png" alt="Ezüst logó 1" class="w-64 h-32 object-contain rounded-2xl shadow-lg cursor-pointer hover:scale-105 transition-transform duration-500">
+        <img src="img/test.png" alt="Ezüst logó 2" class="w-64 h-32 object-contain rounded-2xl shadow-lg cursor-pointer hover:scale-105 transition-transform duration-500">
+        <img src="img/test.png" alt="Ezüst logó 3" class="w-64 h-32 object-contain rounded-2xl shadow-lg cursor-pointer hover:scale-105 transition-transform duration-500">
+        <img src="img/test.png" alt="Ezüst logó 4" class="w-64 h-32 object-contain rounded-2xl shadow-lg cursor-pointer hover:scale-105 transition-transform duration-500">
+      </div>
+    </div>
+
+    <div class="bg-gray-900 rounded-2xl p-6 md:p-12 shadow-lg" data-aos="fade-up">
+      <h3 class="text-orange-400 font-semibold mb-6 text-center text-[clamp(1.25rem,3vw,2rem)]">Bronz</h3>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 justify-items-center items-center">
+        <img src="img/test.png" alt="Bronz logó 1" class="w-48 h-24 object-contain rounded-2xl shadow-lg cursor-pointer hover:scale-105 transition-transform duration-500">
+        <img src="img/test.png" alt="Bronz logó 2" class="w-48 h-24 object-contain rounded-2xl shadow-lg cursor-pointer hover:scale-105 transition-transform duration-500">
+        <img src="img/test.png" alt="Bronz logó 3" class="w-48 h-24 object-contain rounded-2xl shadow-lg cursor-pointer hover:scale-105 transition-transform duration-500">
+        <img src="img/test.png" alt="Bronz logó 4" class="w-48 h-24 object-contain rounded-2xl shadow-lg cursor-pointer hover:scale-105 transition-transform duration-500">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Pozíciók -->
+<section class="max-w-6xl mx-auto py-20 px-6" id="positions">
+  <h2 class="font-bold mb-12 text-center text-yellow-400 text-[clamp(2rem,5vw,3rem)]" data-aos="fade-up">Nyitott pozíciók</h2>
+  <div class="bg-gray-900 rounded-2xl p-8 md:p-12 space-y-8 shadow-lg">
+    <div class="bg-black/50 rounded-xl p-6 backdrop-blur-md" data-aos="fade-up">
+      <h3 class="font-semibold text-yellow-400 mb-4 text-[clamp(1.25rem,3vw,2rem)]">Nyitott Pozíció 1</h3>
+      <p class="text-gray-200 mb-4">Feladatok: ...</p>
+      <a href="#contact" class="text-blue-400 hover:text-blue-500 underline">Jelentkezem</a>
+    </div>
+    <div class="bg-black/50 rounded-xl p-6 backdrop-blur-md" data-aos="fade-up">
+      <h3 class="font-semibold text-yellow-400 mb-4 text-[clamp(1.25rem,3vw,2rem)]">Nyitott Pozíció 2</h3>
+      <p class="text-gray-200 mb-4">Feladatok: ...</p>
+      <a href="#contact" class="text-blue-400 hover:text-blue-500 underline">Jelentkezem</a>
+    </div>
+  </div>
+</section>
+
+<!-- Csapattagok -->
+<section class="max-w-6xl mx-auto py-20 px-6" id="team">
+  <h2 class="font-bold mb-12 text-center text-yellow-400 text-[clamp(2rem,5vw,3rem)]" data-aos="fade-up">Csapattagok</h2>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+    <div class="text-center" data-aos="flip-left">
+      <img src="img/elmo.jpg" alt="Kiss Péter" class="w-32 h-32 mx-auto rounded-full mb-4 object-cover">
+      <h3 class="font-semibold text-blue-400 text-[clamp(1.25rem,3vw,2rem)]">Kiss Péter</h3>
+      <p class="text-sm text-gray-400">Pozíció</p>
+    </div>
+    <div class="text-center" data-aos="flip-left">
+      <img src="img/abby.png" alt="Nagy Anna" class="w-32 h-32 mx-auto rounded-full mb-4 object-cover">
+      <h3 class="font-semibold text-blue-400 text-[clamp(1.25rem,3vw,2rem)]">Nagy Anna</h3>
+      <p class="text-sm text-gray-400">Pozíció</p>
+    </div>
+    <div class="text-center" data-aos="flip-left">
+      <img src="img/oscar.jpg" alt="Tóth Dávid" class="w-32 h-32 mx-auto rounded-full mb-4 object-cover">
+      <h3 class="font-semibold text-blue-400 text-[clamp(1.25rem,3vw,2rem)]">Tóth Dávid</h3>
+      <p class="text-sm text-gray-400">Pozíció</p>
+    </div>
+    <div class="text-center" data-aos="flip-left">
+      <img src="img/julia.png" alt="Szabó Eszter" class="w-32 h-32 mx-auto rounded-full mb-4 object-cover">
+      <h3 class="font-semibold text-blue-400 text-[clamp(1.25rem,3vw,2rem)]">Szabó Eszter</h3>
+      <p class="text-sm text-gray-400">Pozíció</p>
+    </div>
+  </div>
+</section>
+
+<!-- Kapcsolat -->
+<section class="bg-gray-900 text-white py-20 px-6" id="contact">
+  <h2 class="font-bold mb-8 text-center text-yellow-400 text-[clamp(2rem,5vw,3rem)]" data-aos="fade-up">Kapcsolat</h2>
+  <p class="text-center mb-4" data-aos="fade-up" data-aos-delay="200">
+    Írj nekünk: <a href="mailto:" class="underline text-blue-400 hover:text-blue-500">dfr@deac.hu</a>
+  </p>
+  <form action="mailto:" method="post" enctype="text/plain" class="max-w-md mx-auto flex flex-col gap-4">
+    <input type="text" name="name" placeholder="Név" class="p-2 rounded border border-gray-600 bg-gray-800 text-white" required>
+    <input type="email" name="email" placeholder="Email" class="p-2 rounded border border-gray-600 bg-gray-800 text-white" required>
+    <textarea name="message" placeholder="Üzenet" rows="5" class="p-2 rounded border border-gray-600 bg-gray-800 text-white" required></textarea>
+    <button type="submit" class="bg-yellow-400 hover:bg-yellow-500 text-black px-4 py-2 rounded font-semibold transition">Küldés</button>
+  </form>
+  <div class="flex justify-center gap-6 mt-6" data-aos="fade-up" data-aos-delay="300">
+    <a href="#" class="hover:text-yellow-400">Facebook</a>
+    <a href="#" class="hover:text-yellow-400">Instagram</a>
+	<a href="#" class="hover:text-yellow-400">Tiktok</a>
+    <a href="#" class="hover:text-yellow-400">LinkedIn</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-black text-gray-500 text-center py-6 border-t border-gray-800">
+  <p>&copy; 2025 by DEAC Formula Racing. Minden jog fenntartva.</p>
+</footer>
+
+<!-- Lightbox -->
+<div id="lightbox" class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center hidden z-50">
+  <img id="lightbox-img" src="" class="max-h-[90%] max-w-[90%] rounded-2xl shadow-2xl">
+  <button class="absolute top-6 right-6 text-white text-3xl font-bold" onclick="closeLightbox()">×</button>
+</div>
+
+<script>
+// Mobil menü toggle
+const mobileBtn = document.getElementById('mobile-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+
+mobileBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('hidden');
+  const [top, middle, bottom] = mobileBtn.querySelectorAll('span');
+  top.classList.toggle('rotate-45');
+  top.classList.toggle('translate-y-2');
+  middle.classList.toggle('opacity-0');
+  bottom.classList.toggle('-rotate-45');
+  bottom.classList.toggle('-translate-y-2');
+});
+
+// Smooth scroll a szekció tetejére (navbar figyelembe vétele)
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', function(e){
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if(!target) return;
+
+    // Mobil menü bezárása
+    if(!mobileMenu.classList.contains('hidden')){
+      mobileMenu.classList.add('hidden');
+      const [top, middle, bottom] = mobileBtn.querySelectorAll('span');
+      top.classList.remove('rotate-45','translate-y-2');
+      middle.classList.remove('opacity-0');
+      bottom.classList.remove('-rotate-45','-translate-y-2');
+    }
+
+    // Fixed navbar magassága
+    const header = document.querySelector('header');
+    const headerHeight = header ? header.offsetHeight : 0;
+
+    // A szekció tetejére görgetés: navbar figyelembe véve
+    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+
+    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+  });
+});
+</script>
+
+
+<script>
+  function openLightbox(img) { document.getElementById('lightbox-img').src = img.src; document.getElementById('lightbox').classList.remove('hidden'); }
+  function closeLightbox() { document.getElementById('lightbox').classList.add('hidden'); }
+</script>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({ once: true });</script>
+
+</body>
+</html>
