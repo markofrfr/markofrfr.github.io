@@ -63,14 +63,20 @@
 </header>
 
 <!-- Hero -->
-<section class="h-screen flex flex-col justify-center items-center text-center bg-gradient-to-br from-black to-blue-900 text-white relative">
-  <div data-aos="fade-up" class="mt-16 flex flex-col items-center text-center gap-4">
+<section class="h-screen flex flex-col justify-center items-center text-center text-white relative bg-cover bg-center" style="background-image: url('img/hatter.jpg');">
+
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black/60"></div> <!-- Csak a sötétítés -->
+
+  <!-- Szöveg -->
+  <div data-aos="fade-up" class="relative z-10 flex flex-col items-center gap-4 mt-16">
     <h1 class="font-extrabold text-yellow-400 text-[clamp(3rem,8vw,5rem)] mb-4">Üdvözöl a DEAC Formula Racing!</h1>
-    <p class=" mb-0 text-gray-200 text-[clamp(1rem,1.8vw,1.25rem)]">Tervezünk. Építünk. Versenyzünk.<br>A pályán egy autó jelenik meg, de mögötte egy egész csapat áll!</p>
+    <p class="mb-0 text-gray-200 text-[clamp(1rem,1.8vw,1.25rem)]">Tervezünk. Építünk. Versenyzünk.<br>A pályán egy autó jelenik meg, de mögötte egy egész csapat áll!</p>
     <a href="#contact" class="bg-yellow-400 hover:bg-yellow-500 text-black px-6 py-3 rounded-full font-semibold transition">Írj nekünk!</a>
   </div>
-  
+
   <div class="absolute bottom-6 animate-bounce text-sm opacity-70">↓ Görgess ↓</div>
+
 </section>
 
 <!-- Rólunk -->
