@@ -109,25 +109,40 @@
       </div>
     </div>
 
-    <div class="md:flex md:items-center md:gap-12 bg-black/50 rounded-xl p-6 backdrop-blur-md">
+	<div class="md:flex md:flex-row-reverse md:items-center md:gap-12 bg-black/50 rounded-xl p-6 backdrop-blur-md">
 
-      <div class="md:w-1/2 space-y-6 text-gray-200 text-justify">
-        <h3 class="font-semibold text-yellow-400 mb-4 text-[clamp(1.25rem,3vw,2rem)]">Hol dolgozunk?</h3>
-        <p class="mb-4 flex-1 text-gray-200 text-justify space-y-4" style="text-align-last: left; hyphens: auto;">A Debreceni Egyetem Járműlaboratóriuma szoros együttműködésben a BMW-vel valósult meg, és hivatalosan 2025-ben készült el. Ez a stratégiai partnerség egy korszerű, közel 5000 négyzetméteres létesítményt eredményezett, amely magas szintű autóipari kutatást, fejlesztést és oktatást szolgál.</p>
-        <p class="mb-4 flex-1 text-gray-200 text-justify space-y-4" style="text-align-last: left; hyphens: auto;">A laboratórium dedikált és biztonságos munkateret biztosít az egyetem Formula Student csapata számára, lehetővé téve a zavartalan mérnöki munkát és innovációt. A létesítményhez egy járműteszt pálya is tartozik, amely valós körülményeket kínál a kísérleti validáláshoz és a teljesítmény optimalizálásához.</p>
-        <p class="mb-4 flex-1 text-gray-200 text-justify space-y-4" style="text-align-last: left; hyphens: auto;">A teljes versenyképesség érdekében a laboratórium minden olyan alapvető részleggel fel van szerelve, amely egy sikeres Formula Student programhoz szükséges, beleértve:</p>
-        <ul class="list-disc list-inside mb-4">
-          <li>Gépészmérnöki laborokat</li>
-          <li>Elektronikai és beágyazott rendszerek laborokat</li>
-          <li>Anyagtudományi és tesztelési létesítményeket</li>
-          <li>Szoftverfejlesztési és szimulációs környezeteket</li>
-        </ul>
+	  <!-- szöveg -->
+	  <div class="md:w-1/2 space-y-6 text-gray-200 text-justify">
+		<h3 class="font-semibold text-yellow-400 mb-4 text-[clamp(1.25rem,3vw,2rem)]">Hol dolgozunk?</h3>
+		
+		<p class="mb-4 flex-1 text-gray-200 text-justify space-y-4" style="text-align-last: left; hyphens: auto;">
+		  A Debreceni Egyetem Járműlaboratóriuma szoros együttműködésben a BMW-vel valósult meg, és hivatalosan 2025-ben készült el. Ez a stratégiai partnerség egy korszerű, közel 5000 négyzetméteres létesítményt eredményezett, amely magas szintű autóipari kutatást, fejlesztést és oktatást szolgál.
+		</p>
+		
+		<p class="mb-4 flex-1 text-gray-200 text-justify space-y-4" style="text-align-last: left; hyphens: auto;">
+		  A laboratórium dedikált és biztonságos munkateret biztosít az egyetem Formula Student csapata számára, lehetővé téve a zavartalan mérnöki munkát és innovációt. A létesítményhez egy járműteszt pálya is tartozik, amely valós körülményeket kínál a kísérleti validáláshoz és a teljesítmény optimalizálásához.
+		</p>
+		
+		<p class="mb-4 flex-1 text-gray-200 text-justify space-y-4" style="text-align-last: left; hyphens: auto;">
+		  A teljes versenyképesség érdekében a laboratórium minden olyan alapvető részleggel fel van szerelve, amely egy sikeres Formula Student programhoz szükséges, beleértve:
+		</p>
+		
+		<ul class="list-disc list-inside mb-4">
+		  <li>Gépészmérnöki laborokat</li>
+		  <li>Elektronikai és beágyazott rendszerek laborokat</li>
+		  <li>Anyagtudományi és tesztelési létesítményeket</li>
+		  <li>Szoftverfejlesztési és szimulációs környezeteket</li>
+		</ul>
 		<p></p>
-      </div>
+	  </div>
+
+	  <!-- kép -->
 	  <div class="md:w-1/2">
-        <img src="img/jkc.jpg" alt="Debreceni Egyetem Járműlaboratóriuma" class="rounded-2xl shadow-lg w-full h-auto object-cover cursor-pointer hover:scale-105 transition-transform duration-500" onclick="openLightbox(this)">
-      </div>
-    </div>
+		<img src="img/jkc.jpg" alt="Debreceni Egyetem Járműlaboratóriuma" 
+			 class="rounded-2xl shadow-lg w-full h-auto object-cover cursor-pointer hover:scale-105 transition-transform duration-500"
+			 onclick="openLightbox(this)">
+	  </div>
+	</div>
 
     <div class="md:flex md:items-center md:gap-12 bg-black/50 rounded-xl p-6 backdrop-blur-md">
       <div class="md:w-1/2 space-y-6 text-gray-200 text-justify">
@@ -576,5 +591,3 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 </script>
 </body>
 </html>
-
-
